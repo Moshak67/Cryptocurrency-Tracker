@@ -20,7 +20,7 @@ const Navigation = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link as={Link} to="/">
+              <Nav.Link as={Link} to="/Cryptocurrency-Tracker">
                 <mark>Home</mark>
               </Nav.Link>
               <Nav.Link as={Link} to="/allcoins">
@@ -30,14 +30,14 @@ const Navigation = () => {
           </Navbar.Collapse>
         </Navbar>
       </Container>
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/allcoins" element={<CryptoList />} />
+      {/*<Routes>*/}
+      {/*  <Route exact path="/" element={<Home />} />*/}
+      {/*  <Route path="/allcoins" element={<CryptoList />} />*/}
 
-        <Route path="/coin" element={<Coin />}>
-          <Route path=":coinId" element={<Coin />} />
-        </Route>
-      </Routes>
+      {/*  <Route path="/coin" element={<Coin />}>*/}
+      {/*    <Route path=":coinId" element={<Coin />} />*/}
+      {/*  </Route>*/}
+      {/*</Routes>*/}
     </>
   );
 };
