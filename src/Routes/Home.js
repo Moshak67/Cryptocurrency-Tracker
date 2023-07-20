@@ -13,8 +13,12 @@ const Home = () => {
     };
   const { loading, trendingCoins, error } = TrendingCryptos();
 
+
   if (error) {
     <p>Something Went Wrong! {error.message}</p>;
+  }
+  if (loading){
+      <LinearProgress color="success" />
   }
   return (
     <>
@@ -45,9 +49,7 @@ const Home = () => {
         </Row>
 
         <Container>
-          {loading ? (
-            <LinearProgress color="success" />
-          ) : (
+
 
               <Carousel>
                   {trendingCoins.reduce(reduceRecipes, []).map((item, index) => (
@@ -69,38 +71,6 @@ const Home = () => {
                       </Carousel.Item>
                   ))}
               </Carousel>
-//
-// <Carousel>
-//     {trendingCoins.reduce(reduceRecipes, []).map((item, index) => (
-//
-//         {/*<div*/}
-//         {/*    style={{*/}
-//         {/*        padding: 20,*/}
-//         {/*        display: "flex",*/}
-//         {/*        flexDirection: Row,*/}
-//         {/*        flexWrap: "wrap",*/}
-//         {/*        justifyContent: "space-around",*/}
-//         {/*    }}*/}
-//         {/*>*/}
-//
-//             {trendingCoins.map((coins) => (
-//                 <Carousel.Item>
-//                 <CoinCard
-//                     key={coins.id}
-//                     name={coins.name}
-//                     symbol={coins.symbol}
-//                     image={coins.image}
-//                     market_cap_rank={coins.market_cap_rank}
-//                     current_price={coins.current_price}
-//                 />
-//                 </Carousel.Item>
-//             ))}
-//         {/*</div>*/}
-//
-// </Carousel>
-//
-//
-          )}
         </Container>
       </Container>
     </>
