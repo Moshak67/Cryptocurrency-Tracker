@@ -1,3 +1,9 @@
+# Live Demo
+
+![cryptoweb (1)](https://github.com/Moshak67/Cryptocurrency-Tracker/assets/51073624/d70ef1f2-dc33-43ab-83de-bec1e1649a2d)
+
+
+
 # Cryptocurrency Tracker App
 
 The Cryptocurrency Tracker App is a user-friendly web application that allows users to monitor real-time market data and information for the top 10 cryptocurrencies. The app is built using React.js, Bootstrap Material UI, and React Router DOM, providing a seamless and visually appealing user experience.
